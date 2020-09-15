@@ -42,6 +42,14 @@ $('.more').showMoreItems({
   ],
 });
 
+// Data Table Js
+$(document).ready(function () {
+  $('#allproduct').DataTable();
+  $('#allorders').DataTable();
+  $('#recentorders').DataTable();
+  $('#delproduct').DataTable();
+});
+
 // Cart Page Javascript
 var decrease = document.getElementById('decrease');
 var increase = document.getElementById('increase');

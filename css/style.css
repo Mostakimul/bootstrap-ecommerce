@@ -10,7 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .item {
-  padding: 20px 0px 20px 0px;
+  padding: 15px 0px 15px 0px;
 }
 .cstm-body {
   border-top: 2px solid black;
@@ -19,7 +19,7 @@ body {
 }
 .cstm-header {
   background: #000;
-  padding: 15px 0px 15px 0px;
+  padding: 12px 0px 12px 0px;
 }
 .cstm-carousel {
   /* height: 90%; */
@@ -53,7 +53,6 @@ body {
   background-image: url(../img/bg-3.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
 }
 .product-image img {
   /* min-width: 200px; */
@@ -134,5 +133,27 @@ body {
   background-color: #f66436;
   border-radius: 7px;
   box-shadow: 1px 5px 20px #111;
+  transform: translate(-1px);
+}
+
+@media (max-width: 786px) {
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+  .top-nav {
+    position: static;
+  }
+  /* .sidebar-link {
+    font-size: 13px;
+  } */
+}
+
+.cstm-card {
+  box-shadow: 1px 2px 5px #999;
+  transition: all 0.4s;
+}
+.cstm-card:hover {
+  box-shadow: 2px 3px 15px #999;
   transform: translate(-1px);
 }

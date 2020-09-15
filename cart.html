@@ -24,76 +24,32 @@
 
 <body>
     <header class="cstm-header">
-        <!-- Sign In Modal -->
-        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Logout Modal -->
+        <div class="modal fade" id="logout">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                    <div class="modal-header bg-dark text-light">
+                        <h5 class="modal-title">Do You Really Want to Leave?</h5>
+                        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
                     </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <h5 class="d-block">Don't have an account?</h5>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signup">Create
-                            Now</button>
+                    <!-- <div class="modal-body">
+                    <h5>Press Logout to leave</h5>
+                </div> -->
+                    <div class="modal-footer bg-dark">
+                        <button type="button" class="btn btn-light">Stay Here</button>
+                        <button type="button" class="btn btn-danger">Logout</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Sign up Modal -->
-        <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <h5 class="d-block">Already have an account?</h5>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">Login
-                            Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
+        <!-- Logout Modal Ends -->
+        <div class="container-fluid">
             <!-- Navigation bar -->
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg navbar-dark cstm-header">
-                        <a class="navbar-brand" href="#">Sports World</a>
+                        <a class="navbar-brand" href="index.html"><img src="./img/logo.png" width="200px"
+                                class="img-fluid" alt="logo"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -102,17 +58,22 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link mx-2" href="#">Home <span class="sr-only">(current)</span></a>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-2" href="index.html">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item  active">
+                                    <a class="nav-link mx-2" href="cart.html">Order</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link mx-2" href="#">Order</a>
+                                    <a class="nav-link mx-2" href="dashboard.html">Dashboard</a>
                                 </li>
                             </ul>
-                            <button class="btn btn-outline-light mx-2" data-toggle="modal"
-                                data-target="#login">Login</button>
+
+                            <button class="btn btn-outline-light mx-2" data-toggle="modal" data-target="#logout"><i
+                                    class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
                             <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fa fa-shopping-cart"></i>
-                                Cart</button>
+                                Cart <span id="numberOfProduct"> 2</span></button>
 
 
                         </div>
