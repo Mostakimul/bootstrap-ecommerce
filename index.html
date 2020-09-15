@@ -56,39 +56,7 @@
                 </div>
             </div>
         </div>
-        <!-- Sign up Modal -->
-        <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <h5 class="d-block">Already have an account?</h5>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">Login
-                            Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
+        <div class="container-fluid">
             <!-- Navigation bar -->
             <div class="row">
                 <div class="col-12">
@@ -109,9 +77,18 @@
                                 <li class="nav-item">
                                     <a class="nav-link mx-2" href="cart.html">Order</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-2" href="dashboard.html">Dashboard</a>
+                                </li>
                             </ul>
+                            <form class="form-inline">
+                                <input class="form-control mx-2 my-2" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-light" type="submit">Search</button>
+                            </form>
                             <button class="btn btn-outline-light mx-2" data-toggle="modal"
                                 data-target="#login">Login</button>
+                            <button class="btn btn-outline-light mx-2">Sign Up</button>
                             <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fa fa-shopping-cart"></i>
                                 Cart <span id="numberOfProduct"> 2</span></button>
 
@@ -166,17 +143,10 @@
                             <div class="card shadow-lg text-center" style="width: 18rem;">
                                 <img src="img/product/product-1.jpg" class="card-img-top img-fluid" alt="product-1">
                                 <div class="card-body cstm-body">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Black Shoe</h5>
                                     <p class="card-text">$120</p>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <a href="#" class="btn btn-light">Add to Cart</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn btn-light">Details</a>
-                                        </div>
-                                    </div>
-
+                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -184,16 +154,10 @@
                             <div class="card shadow-lg text-center" style="width: 18rem;">
                                 <img src="img/product/product-2.jpg" class="card-img-top img-fluid" alt="product-2">
                                 <div class="card-body cstm-body">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Gray Jacket</h5>
                                     <p class="card-text">$120</p>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <a href="#" class="btn btn-light">Add to Cart</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn btn-light">Details</a>
-                                        </div>
-                                    </div>
+                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -201,9 +165,10 @@
                             <div class="card shadow-lg text-center" style="width: 18rem;">
                                 <img src="img/product/product-3.jpg" class="card-img-top img-fluid" alt="product-3">
                                 <div class="card-body cstm-body">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Grey shoe</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light">Add to Cart</a>
+                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -211,9 +176,10 @@
                             <div class="card shadow-lg text-center" style="width: 18rem;">
                                 <img src="img/product/product-4.jpg" class="card-img-top img-fluid" alt="product-4">
                                 <div class="card-body cstm-body">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Black Short</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light">Add to Cart</a>
+                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -221,9 +187,10 @@
                             <div class="card shadow-lg text-center" style="width: 18rem;">
                                 <img src="img/product/product-5.jpg" class="card-img-top img-fluid" alt="product-5">
                                 <div class="card-body cstm-body">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Sport Watch</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light">Add to Cart</a>
+                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -231,9 +198,10 @@
                             <div class="card shadow-lg text-center" style="width: 18rem;">
                                 <img src="img/product/product-6.jpg" class="card-img-top img-fluid" alt="product-6">
                                 <div class="card-body cstm-body">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Polyster jacket</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light">Add to Cart</a>
+                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -396,6 +364,12 @@
                                     Instagram</a></li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <!-- Copy right row -->
+            <div class="row text-center mt-5">
+                <div class="col-12">
+                    <p> Copyright © 2020 mkweb | Developed by Mostakimul karim</p>
                 </div>
             </div>
         </div>
