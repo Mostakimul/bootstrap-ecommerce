@@ -43,6 +43,62 @@
             </div>
         </div>
         <!-- Logout Modal Ends -->
+        <!-- Payment Modal Start -->
+        <div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="payment">Enter Card Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="accepted-card d-flex justify-content-between align-items-center">
+                                        <p class="mb-0">Accepted Cards</p>
+                                        <div class="cards-icon d-flex justify-content-center align-items-center">
+                                            <img src="img/visa.png" alt="visa" width="30px" class="img-fluid mx-1">
+                                            <img src="img/master.png" alt="master" width="30px" class="img-fluid mx-1">
+                                            <img src="img/paypal.png" alt="paypal" width="30px" class="img-fluid mx-1">
+                                        </div>
+                                    </div>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="cardname">Name on Card:</label>
+                                            <input type="text" class="form-control" id="cardname">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cardnumber">Card Number:</label>
+                                            <input type="text" class="form-control" id="cardnumber">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label for="cvc">CVC</label>
+                                                <input type="text" class="form-control" id="cvc" placeholder="ex: 311">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="expdate">Expiration Month:</label>
+                                                <input type="text" class="form-control" id="expdate" placeholder="MM">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="expyear">Expiration Year:</label>
+                                                <input type="text" class="form-control" id="expyear" placeholder="YYYY">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-block btn-dark">Pay Now</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Payment Modal End -->
         <div class="container-fluid">
             <!-- Navigation bar -->
             <div class="row">
@@ -206,7 +262,7 @@
                 <!-- Calculation section -->
                 <div class="col-md-12 col-lg-4 mx-auto mt-lg-0 mt-md-5">
                     <div class="right-side p-3 shadow bg-white">
-                        <h4 class="product-name mb-5">The toatl amount of</h4>
+                        <h4 class="product-name mb-5">The total amount of</h4>
                         <div class="price-individual d-flex justify-content-between">
                             <p>Product amount</p>
                             <p>$ <span>0.00</span></p>
@@ -220,7 +276,8 @@
                             <p>The Total Amount is</p>
                             <p>$ <span id="total-cart-amount">0.00</span></p>
                         </div>
-                        <button class="btn btn-dark text-uppercase"> Checkout</button>
+                        <button class="btn btn-dark text-uppercase" data-toggle="modal" data-target="#payment">
+                            Checkout</button>
                     </div>
                     <!-- Discount -->
                     <div class="discount-code shadow mt-3">

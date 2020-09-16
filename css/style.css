@@ -157,3 +157,15 @@ body {
   box-shadow: 2px 3px 15px #999;
   transform: translate(-1px);
 }
+
+.accepted-card {
+  background-color: #999;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Modal width */
+.cstm-modal .modal-dialog {
+  max-width: 750px;
+}

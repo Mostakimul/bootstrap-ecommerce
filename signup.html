@@ -82,13 +82,6 @@
                                     <a class="nav-link mx-2" href="dashboard.html">Dashboard</a>
                                 </li>
                             </ul>
-                            <form class="form-inline">
-                                <input class="form-control mx-2 my-2" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn btn-light" type="submit"><i class="fa fa-search"
-                                        aria-hidden="true"></i>
-                                </button>
-                            </form>
                             <button class="btn btn-outline-light mx-2" data-toggle="modal"
                                 data-target="#login">Login</button>
                             <a href="signup.html"><button class="btn btn-outline-light mx-2">Sign Up</button></a>
@@ -107,7 +100,7 @@
     <!-- SignUp Form Start -->
     <section>
         <div class="col-12 col-md-10 col-lg-6 mx-auto mt-5 p-3 mb-5">
-            <div class="card">
+            <div class="card shadow-lg">
                 <div class="card-body">
                     <div class="card-title">
                         <h4 class="text-center">Create Your Account</h4>
@@ -133,7 +126,24 @@
                             <input type="email" class="form-control" id="phone" placeholder="Enter Mobile Number">
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-6">
+                            <div class="form-group col-md-6">
+                                <legend class="col-form-label">Gender:</legend>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="Male" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="Male">Male</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="female" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="female">Female</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="example-date-input" class="col-form-label">Date:</label>
+                                <input class="form-control" type="date" id="example-date-input">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
                                 <label for="district">District:</label>
                                 <input type="text" class="form-control" id="district" placeholder="District">
                             </div>

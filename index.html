@@ -50,12 +50,51 @@
                     </div>
                     <div class="modal-footer bg-dark text-light">
                         <h5 class="d-block">Don't have an account?</h5>
-                        <button type="button" class="btn btn-sm bg-light">Create
-                            Now</button>
+                        <a href="signup.html"><button type="button" class="btn btn-sm bg-light">Create
+                                Now</button></a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Signin Modal End -->
+        <!-- Product Details Modal Start -->
+        <div class="modal fade cstm-modal" id="productdetails" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productdetails">Product Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center shadow">
+                                    <div class="card">
+                                        <img src="img/product/product-15.jpg" alt="product" width="300px"
+                                            class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 p-3">
+                                    <h5>Black Shoe</h5>
+                                    <h5 class="mb-5">$99.99</h5>
+                                    <hr>
+                                    <p>Product Id# pr0015</p>
+                                    <p class="badge badge-success w-25 p-2">In Stock</p>
+                                    <hr>
+                                    <h6>Description</h6>
+                                    <p class="font-weight-light">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit. Illo natus doloribus
+                                        dolore? Quam, tempore</p>
+                                    <a href="#" class="btn btn-dark btn-block">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Details Modal End -->
         <div class="container-fluid">
             <!-- Navigation bar -->
             <div class="row">
@@ -82,7 +121,7 @@
                                     <a class="nav-link mx-2" href="dashboard.html">Dashboard</a>
                                 </li>
                             </ul>
-                            <form class="form-inline">
+                            <form class="form-inline d-none d-lg-block">
                                 <input class="form-control mx-2 my-2" type="search" placeholder="Search"
                                     aria-label="Search">
                                 <button class="btn btn-light" type="submit"><i class="fa fa-search"
@@ -149,7 +188,8 @@
                                 <div class="card-body cstm-body">
                                     <h5 class="card-title">Black Shoe</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                        data-target="#productdetails">Details</button>
                                     <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
@@ -160,7 +200,9 @@
                                 <div class="card-body cstm-body">
                                     <h5 class="card-title">Gray Jacket</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <!-- <a href="#" class="btn btn-light btn-block">Details</a> -->
+                                    <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                        data-target="#productdetails">Details</button>
                                     <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
@@ -171,7 +213,8 @@
                                 <div class="card-body cstm-body">
                                     <h5 class="card-title">Grey shoe</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                        data-target="#productdetails">Details</button>
                                     <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
@@ -182,7 +225,8 @@
                                 <div class="card-body cstm-body">
                                     <h5 class="card-title">Black Short</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                        data-target="#productdetails">Details</button>
                                     <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
@@ -193,7 +237,8 @@
                                 <div class="card-body cstm-body">
                                     <h5 class="card-title">Sport Watch</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                        data-target="#productdetails">Details</button>
                                     <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
@@ -204,7 +249,8 @@
                                 <div class="card-body cstm-body">
                                     <h5 class="card-title">Polyster jacket</h5>
                                     <p class="card-text">$120</p>
-                                    <a href="#" class="btn btn-light btn-block">Details</a>
+                                    <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                        data-target="#productdetails">Details</button>
                                     <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                                 </div>
                             </div>
@@ -245,9 +291,10 @@
                             <img src="img/product/product-12.jpg" class="card-img-top align-self-center product-img"
                                 alt="product-12">
                             <div class="card-body cstm-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">$120</p>
-                                <a href="#" class="btn btn-light btn-block">Details</a>
+                                <h5 class="card-title">Nike Runnig shoe</h5>
+                                <p class="card-text">$129.00</p>
+                                <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                    data-target="#productdetails">Details</button>
                                 <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                             </div>
                         </div>
@@ -259,9 +306,10 @@
                             <img src="img/product/product-13.jpg" class="card-img-top align-self-center product-img"
                                 alt="product-13">
                             <div class="card-body cstm-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">$120</p>
-                                <a href="#" class="btn btn-light btn-block">Details</a>
+                                <h5 class="card-title">Rugby Ball</h5>
+                                <p class="card-text">$76.49</p>
+                                <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                    data-target="#productdetails">Details</button>
                                 <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                             </div>
                         </div>
@@ -274,9 +322,10 @@
                             <img src="img/product/product-14.jpg" class="card-img-top align-self-center product-img"
                                 alt="product-14">
                             <div class="card-body cstm-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">$120</p>
-                                <a href="#" class="btn btn-light btn-block">Details</a>
+                                <h5 class="card-title">Puma Shoe</h5>
+                                <p class="card-text">$139.99</p>
+                                <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                    data-target="#productdetails">Details</button>
                                 <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                             </div>
                         </div>
@@ -289,9 +338,10 @@
                             <img src="img/product/product-15.jpg" class="card-img-top align-self-center product-img"
                                 alt="product-15">
                             <div class="card-body cstm-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">$120</p>
-                                <a href="#" class="btn btn-light btn-block">Details</a>
+                                <h5 class="card-title">Soocer Shocks</h5>
+                                <p class="card-text">$69.00</p>
+                                <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                    data-target="#productdetails">Details</button>
                                 <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                             </div>
                         </div>
@@ -304,9 +354,10 @@
                             <img src="img/product/product-16.jpg" class="card-img-top align-self-center product-img"
                                 alt="product-16">
                             <div class="card-body cstm-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">$120</p>
-                                <a href="#" class="btn btn-light btn-block">Details</a>
+                                <h5 class="card-title">cr7 Underwear</h5>
+                                <p class="card-text">$149.00</p>
+                                <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                    data-target="#productdetails">Details</button>
                                 <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                             </div>
                         </div>
@@ -319,9 +370,10 @@
                             <img src="img/product/product-17.jpg" class="card-img-top align-self-center product-img"
                                 alt="product-17">
                             <div class="card-body cstm-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">$120</p>
-                                <a href="#" class="btn btn-light btn-block">Details</a>
+                                <h5 class="card-title">Black Sport Gloves</h5>
+                                <p class="card-text">$39.00</p>
+                                <button type="button" class="btn btn-light btn-block" data-toggle="modal"
+                                    data-target="#productdetails">Details</button>
                                 <a href="#" class="btn btn-light btn-block">Add to Cart</a>
                             </div>
                         </div>
