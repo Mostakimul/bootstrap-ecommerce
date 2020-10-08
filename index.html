@@ -35,15 +35,27 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form action="" onsubmit="return validate()">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    autocomplete="off">
+                                <div class="invalid-feedback">
+                                    Incorrect Email format.
+                                </div>
+                                <div class="valid-feedback">
+                                    Email Looks Good.
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password">
+                                <div class="invalid-feedback">
+                                    Please Enter Password
+                                </div>
+                                <div class="valid-feedback">
+                                    Password Looks Good.
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-dark">Submit</button>
                         </form>
@@ -437,6 +449,39 @@
         </div>
     </footer>
 
+    <!-- Script For Login Validation -->
+    <script>
+        var email = document.getElementById('email');
+        var pass = document.getElementById('password');
+
+        email.addEventListener('keyup', checkemailvalidity);
+
+        function checkemailvalidity(e) {
+            var validemail = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+            var emailval = email.value;
+            if (validemail.test(emailval)) {
+                email.classList.add('is-valid');
+                email.classList.remove('is-invalid');
+            } else {
+                email.classList.add('is-invalid');
+                email.classList.remove('is-valid');
+            }
+        }
+        function validate() {
+            var emailvalue = email.value;
+            var passvalue = pass.value;
+
+            if (emailvalue == '') {
+                email.classList.add('is-invalid');
+                return false;
+            }
+            if (passvalue == '') {
+                pass.classList.add('is-invalid');
+                return false;
+            }
+
+        }
+    </script>
 
     <!-- Bootstrap js -->
     <script type="text/javascript" src="js/jquery.js"></script>
